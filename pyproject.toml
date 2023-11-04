@@ -1,0 +1,36 @@
+[project]
+name = "applephrase"
+version = "1.0"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+description = "Generate memorable passphrases using pseudowords."
+requires-python = ">=3.8"
+keywords = ["passphrase","password","pseudoword","gibberish"]
+authors = [
+    {name = "Brent Huisman"},
+    {email = "brent@huisman.pl"}
+]
+maintainers = [
+    {name = "Brent Huisman", email = "brent@huisman.pl"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Utilities",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "python-Levenshtein",
+    "statsmodels"
+]
+
+[project.urls]
+homepage = "https://github.com/brenthuisman/applephrase"
+documentation = "https://github.com/brenthuisman/applephrase"
+repository = "https://github.com/brenthuisman/applephrase"
+changelog = "https://github.com/brenthuisman/applephrase/blob/master/README.md"
+
+[project.scripts]
+applephrase = "applephrase:main"
