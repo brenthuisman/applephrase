@@ -19,7 +19,7 @@ langdict = {
 
 def parsedicefile(fname, minlen, maxlen):
     words = []
-    with open(fname) as file:
+    with open(fname, encoding='utf-8') as file:
         for line in file.readlines():
             m = re.match("([^\W\d]+)\s.*", line.strip())
             if m and len(m.group(1)) >= minlen and len(m.group(1)) <= maxlen:
