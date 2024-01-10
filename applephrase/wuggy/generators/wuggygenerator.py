@@ -111,9 +111,14 @@ class WuggyGenerator():
             if not os.path.exists(self.language_plugin_data_path):
                 raise FileNotFoundError(f"{self.language_plugin_data_path} does not exist.")
             # Official language plugins MUST have the class name "OfficialLanguagePlugin"!
-            language_plugin = importlib.import_module(
-                f".plugins.language_data.{language_plugin_name}.{language_plugin_name}",
-                "wuggy").OfficialLanguagePlugin()
+            try:
+                language_plugin = importlib.import_module(
+                    f".plugins.language_data.{language_plugin_name}.{language_plugin_name}",
+                    "wuggy").OfficialLanguagePlugin()
+            except:
+                language_plugin = importlib.import_module(
+                    f"applephrase.wuggy.plugins.language_data.{language_plugin_name}.{language_plugin_name}",
+                    "wuggy").OfficialLanguagePlugin()
 
         if language_plugin_name not in self.bigramchains:
             default_data_path = os.path.join(

@@ -1,7 +1,7 @@
 import re
 
-#from ...baselanguageplugin import BaseLanguagePlugin
-from wuggy import BaseLanguagePlugin
+from ...baselanguageplugin import BaseLanguagePlugin
+
 
 class OfficialLanguagePlugin(BaseLanguagePlugin):
     default_data = 'orthographic_estonian.txt'

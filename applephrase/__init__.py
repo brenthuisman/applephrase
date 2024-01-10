@@ -1,3 +1,1 @@
-import __main__
-
-__main__.main()
+from applephrase.main import main

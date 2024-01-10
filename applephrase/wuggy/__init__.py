@@ -1,4 +1,9 @@
 ".. include:: ../documentation/home.md"
-from wuggy.evaluators.ld1nn import ld1nn
-from wuggy.generators.wuggygenerator import WuggyGenerator
-from wuggy.plugins.baselanguageplugin import BaseLanguagePlugin
+try:
+    from applephrase.wuggy.evaluators.ld1nn import ld1nn
+    from applephrase.wuggy.generators.wuggygenerator import WuggyGenerator
+    from applephrase.wuggy.plugins.baselanguageplugin import BaseLanguagePlugin
+except:
+    from .evaluators.ld1nn import ld1nn
+    from .generators.wuggygenerator import WuggyGenerator
+    from .plugins.baselanguageplugin import BaseLanguagePlugin
