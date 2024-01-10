@@ -19,6 +19,16 @@ Some examples:
 
 The idea is that the use of pseudowords generates enough entropy in fewer words compared to regular passphrases. A terminating number of random alphanumeric characters helps get around the most common password requirements, and of course adds to the entropy. Since the pseudowords are (hopefully) pronouncable and the random characters limited in number, the resulting passphrase is memorable and still quite short.
 
+## Install
+
+You can download `applephrase` by installing it from PyPI!
+
+```
+pip install applephrase
+```
+
+Alternatively, install or run it from a clone of this repo.
+
 ## Wuggy
 
 This project makes heavy use of [Wuggy](https://github.com/WuggyCode/wuggy), the software that generates the pseudowords. The upstream Python package does not install anymore, but this is easily resolved by removing the unnecessarily strict versions from the requirements file. I made some more modifications to it and added the Estonian language found in one of the forks. Wuggy is not very fast but it is fast enough and is the only project I know of to be available in Python and generate pseudowords in languages other than English.
