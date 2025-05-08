@@ -1,5 +1,7 @@
 ## applephrase
 
+![https://xkcd.com/936/](https://imgs.xkcd.com/comics/password_strength.png)
+
 applephrase is a commandline utility to generate memorable passphrases composed of a number of randomized pseudowords and a brief random string. The pseudowords can be generated for a number of languages: Dutch, French, English, German, Polish, Basque, Spanish, Italian, Serbocroatian Latin, Serbocroatian Cyrillic, Vietnamese, Estonian.
 
 Some examples:
@@ -17,7 +19,7 @@ Some examples:
     Trazonents-Oluviungly-nBwpng
     Ulywcał-Ścipczyk-6hmSx7
 
-The idea is that the use of pseudowords generates enough entropy in fewer words compared to regular passphrases. A terminating number of random alphanumeric characters helps get around the most common password requirements, and of course adds to the entropy. Since the pseudowords are (hopefully) pronouncable and the random characters limited in number, the resulting passphrase is memorable and still quite short.
+The idea is that the use of pseudowords generates enough entropy in fewer words compared to regular passphrases, and protect against dictionary attacks. A terminating number of random alphanumeric characters helps get around the most common password requirements, and of course adds to the entropy. Since the pseudowords are (hopefully) pronouncable and the random characters limited in number, the resulting passphrase is memorable and still quite short.
 
 ## Install
 
@@ -28,6 +30,18 @@ pip install applephrase
 ```
 
 Alternatively, install or run it from a clone of this repo.
+
+## Usage
+
+Run applephrase with desired iso-code of the language you wish to generate passwords for, e.g.:
+
+    $ applephrase nl
+
+Use the options to generate "true" correct-horse-battery-staple-type passwords:
+
+    $ applephrase nl --nw 4 --nc 0 --sep "" --nocaps
+
+For a list of all options and languages, type `applephrase --help`.
 
 ## Wuggy
 

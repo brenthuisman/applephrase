@@ -1,6 +1,6 @@
 [project]
 name = "applephrase"
-version = "1.0"
+version = "1.0.1"
 readme = "README.md"
 license = {file = "LICENSE.txt"}
 description = "Generate memorable passphrases using pseudowords."

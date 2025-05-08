@@ -65,14 +65,16 @@ def wugglify(args):
                 if not args.nocaps
                 else pseudowords
             )
-            + args.sep
-            + "".join(
-                [
-                    secrets.choice(string.digits + string.ascii_letters)
-                    for i in range(args.nc)
-                ]
-            )
         )
+        if args.nc > 1:
+            pw += (
+                args.sep + "".join(
+                        [
+                            secrets.choice(string.digits + string.ascii_letters)
+                            for i in range(args.nc)
+                        ]
+                    )
+                )
         passphrases.append(pw)
     return passphrases
 
